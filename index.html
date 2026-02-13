@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For the Love of My Life ❤️</title>
+    <meta name="description" content="A romantic Valentine's Day journey celebrating our love story">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+    
+    <!-- Cursor Heart Particles -->
+    <div class="cursor-hearts" id="cursorHearts"></div>
+
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="assets/romantic-music.mp3" type="audio/mpeg">
+    </audio>
+    
+    <!-- Music Control -->
+    <button class="music-btn" id="musicBtn" aria-label="Toggle Music">
+        <span class="music-icon">🎵</span>
+    </button>
+
+    <!-- Intro Screen -->
+    <section class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <div class="sparkle-container">
+                <span class="sparkle">✨</span>
+                <span class="sparkle">✨</span>
+                <span class="sparkle">✨</span>
+            </div>
+            <h1 class="glowing-title">
+                <span class="title-line">For the Love</span>
+                <span class="title-line">of My Life</span>
+                <span class="heart-icon">❤️</span>
+            </h1>
+            <p class="intro-subtitle">A journey through our love story</p>
+            <button class="enter-btn" id="enterBtn">
+                <span class="btn-text">Enter</span>
+                <span class="btn-heart">💕</span>
+                <div class="btn-ripple"></div>
+            </button>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        
+        <!-- Timeline Section 1: The Day We Met -->
+        <section class="timeline-section" id="section1" data-parallax="0.3">
+            <div class="section-bg"></div>
+            <div class="glass-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">💫</div>
+                <h2 class="section-title">The Day We Met</h2>
+                <div class="section-divider">
+                    <span class="divider-heart">💗</span>
+                </div>
+                <p class="section-text">
+                    From the moment our eyes met, i didn't actually think we would have even gotten together but once we started dating i knew that i wanted to be with you my whole life cause i was never planning on breaking cause i wanted to see how far we would get even though we weren't really communicating and yh we know it was boring at first but we worked on that now am actually very happy we made it this yr. Every day i pray for it to end without arguments or anything that'll dent our relationship, every week i pray it ends well every month i pray we go through it without problems and i know we'll make to 2027 and further on. Honestly i just want to thank God for bringing us together because you brought out the best in me the purpose in me. To tell you the truth i was always proud of you cause you are so searching looking for what we generate you income actually but some girls depend on rich boys that'll fund their life and some their parents like am very proud to call you my wife cause this is not my first relationship but this is my best no one can ever be compared. My love I'll be ending this here continue exploring the shopping website another gift awaits your concern Goodbye for now💕💕💕.
+                </p>
+                <div class="memory-date">
+                    <span class="date-icon">📅</span>
+                    <span class="date-text">The Beginning of Forever</span>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <span class="float-element">💕</span>
+                <span class="float-element">✨</span>
+                <span class="float-element">🌹</span>
+            </div>
+        </section>
+
+        <!-- Timeline Section 2: My Best Memories (Carousel) -->
+        <section class="timeline-section" id="section2" data-parallax="0.5">
+            <div class="section-bg"></div>
+            <div class="glass-card memories-card carousel-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">📸</div>
+                <h2 class="section-title">My Best Memories</h2>
+                <div class="section-divider">
+                    <span class="divider-heart">💗</span>
+                </div>
+
+                <!-- Carousel Container -->
+                <div class="carousel" id="memoriesCarousel">
+                    <div class="carousel-track-container">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Slide 1 -->
+                            <div class="carousel-slide active">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/me-2.jpeg" alt="Memory 1" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">🌅</span>
+                                    <p class="caption-text">My best memory is you babe that is the best thing to remember</p>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/her-3.jpeg" alt="Memory 2" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">🎭</span>
+                                    <p class="caption-text">Behind every beautiful picture of you is me look closely you'll see me</p>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/her-4.jpeg" alt="Memory 3" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">🌙</span>
+                                    <p class="caption-text">Am actually obsessed with this pic of you i love it so much don't you ever get tired of being this beautiful</p>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/her-5.jpeg" alt="Memory 4" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">🎵</span>
+                                    <p class="caption-text">Honestly this one is so cute like gawddddd😭😭😭</p>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/her-6.jpeg" alt="Memory 5" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">💕</span>
+                                    <p class="caption-text">Every moment of you is a memory I treasure forever</p>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/her-0.jpeg" alt="Memory 6" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">🚗</span>
+                                    <p class="caption-text">I'll never be over this picture from day 1 i loved it up until now damnn what did you do to me🥰🥰</p>
+                                </div>
+                            </div>
+                            <!-- Slide 7 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/her-0.0.jpeg" alt="Memory 7" class="carousel-image" loading="lazy" style="object-fit: contain;">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">⭐</span>
+                                    <p class="caption-text">I can't forget us memory this was one of the best times we had</p>
+                                </div>
+                            </div>
+                            <!-- Slide 8 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/us-2.2.jpeg" alt="Memory 8" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">🌧️</span>
+                                    <p class="caption-text">😂😂😂 don't judge me I'll never forgive you for posting this on your girls group😭😭😭</p>
+                                </div>
+                            </div>
+                            <!-- Slide 9 -->
+                            <div class="carousel-slide">
+                                <div class="carousel-image-wrapper">
+                                    <img src="/images/us-3.jpeg" alt="Memory 9" class="carousel-image" loading="lazy">
+                                    <div class="carousel-image-overlay"></div>
+                                </div>
+                                <div class="carousel-caption">
+                                    <span class="caption-emoji">🌹</span>
+                                    <p class="caption-text">I love you soooo much babe thank you for everything you've done in my life enjoy you suprise tho</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Arrows -->
+                    <button class="carousel-arrow carousel-prev" id="carouselPrev" aria-label="Previous slide">
+                        <span>&#10094;</span>
+                    </button>
+                    <button class="carousel-arrow carousel-next" id="carouselNext" aria-label="Next slide">
+                        <span>&#10095;</span>
+                    </button>
+
+                    <!-- Indicator Dots -->
+                    <div class="carousel-dots" id="carouselDots">
+                        <button class="carousel-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+                        <button class="carousel-dot" data-slide="1" aria-label="Go to slide 2"></button>
+                        <button class="carousel-dot" data-slide="2" aria-label="Go to slide 3"></button>
+                        <button class="carousel-dot" data-slide="3" aria-label="Go to slide 4"></button>
+                        <button class="carousel-dot" data-slide="4" aria-label="Go to slide 5"></button>
+                        <button class="carousel-dot" data-slide="5" aria-label="Go to slide 6"></button>
+                        <button class="carousel-dot" data-slide="6" aria-label="Go to slide 7"></button>
+                        <button class="carousel-dot" data-slide="7" aria-label="Go to slide 8"></button>
+                        <button class="carousel-dot" data-slide="8" aria-label="Go to slide 9"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <span class="float-element">💫</span>
+                <span class="float-element">🦋</span>
+                <span class="float-element">💝</span>
+            </div>
+        </section>
+
+        <!-- Timeline Section 3: Why I Love Her -->
+        <section class="timeline-section" id="section3" data-parallax="0.4">
+            <div class="section-bg"></div>
+            <div class="glass-card love-card">
+                <div class="card-glow"></div>
+                <div class="card-icon">💖</div>
+                <h2 class="section-title">Why I Love You</h2>
+                <div class="section-divider">
+                    <span class="divider-heart">💗</span>
+                </div>
+                <ul class="love-list">
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>Your smile babe your laugh like the cutest thing I've ever heard in my life like am srs i always like replaying voice notes were you laugh it gives me this feeling</span>
+                    </li>
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>The way you talk i love your tongue even the igbo cause it's funny😂😂</span>
+                    </li>
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>I love the vibe in you, you just bring out the fun side in me now i understand what physics meant by unlike polls attracts abeg ooo don't laugh i know the line is bad but i was just making a point if you understand what i meant tho</span>
+                    </li>
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>I loveeeeee the way you motivate me and send things that'll help for a future (Business things by the way) like it's just giving wifey vibes cause every man wants a woman that'll support, motivate and encourage him i sooo love you for this</span>
+                    </li>
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>Your strength like the way you carried me😂😂😂 damn you're strong,</span>
+                    </li>
+                     <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>You are very kind and caring and very alert when it comes to me i love that</span>
+                    </li>
+                     <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>And i can't forget how beautiful you are cause yh i look at character but beautiful adds up to it like addssssssss up to it cause you are so fucking beautiful no tjust beautiful you carry all<br>
+                            1.Hot<br>
+                            2.Sexy<br>
+                            3.Cuteeeeeeeeeeeeee (like so fucking cute)<br>
+                            4.Am lost in words like literally but if there are more words it adds up to it 
+                        </span>
+                    </li>
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>Second to last i sooo love your body, your shape all of them like am instantly turned on when i see you babe like it's sooooo giving i like how you are i don't care if other girls has more than you i chose you for you not for that.😪😪 my nyash and boobs</span>
+                    </li>
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>Lastly, Simply being you – perfectly imperfect</span>
+                    </li>
+                    <li class="love-item">
+                        <span class="love-bullet">💕</span>
+                        <span>Did you really think the things i love about you are numbered don't vex me ooo or else I'll write up to like 1000 things😅😅</span>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="floating-elements">
+                <span class="float-element">🌹</span>
+                <span class="float-element">💐</span>
+                <span class="float-element">🥀</span>
+            </div>
+        </section>
+
+        <!-- Final Section: Valentine Forever -->
+        <section class="final-section" id="finalSection">
+            <div class="final-bg"></div>
+            <div class="confetti-container" id="confettiContainer"></div>
+            <div class="final-content">
+                <div class="mega-heart" id="megaHeart">
+                    <div class="heart-pulse"></div>
+                    <div class="heart-pulse delay"></div>
+                    <span class="heart-emoji">❤️</span>
+                </div>
+                <h2 class="final-title">
+                    <span class="final-line">Will you be my</span>
+                    <span class="final-line highlight">Valentine Forever?</span>
+                </h2>
+                <div class="final-message">
+                    <p>Every love story is beautiful, but ours is my favorite.</p>
+                </div>
+                
+                <!-- Yes/No Buttons -->
+                <div class="valentine-buttons" id="valentineButtons">
+                    <button class="yes-btn" id="yesBtn">
+                        <span class="btn-emoji">💕</span>
+                        <span class="btn-label">Yes</span>
+                    </button>
+                    <button class="no-btn" id="noBtn">
+                        <span class="btn-emoji">💔</span>
+                        <span class="btn-label">No</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Selection Modal -->
+        <div class="gift-modal" id="giftModal">
+            <div class="modal-overlay"></div>
+            <div class="gift-content">
+                <h3 class="gift-title">Pick Your Valentine Gift! 🎁</h3>
+                <p class="gift-subtitle">Choose wisely, my love...</p>
+                <div class="gift-options">
+                    <div class="gift-option money-option" id="moneyOption">
+                        <div class="gift-image">💰</div>
+                        <span class="gift-label">Money</span>
+                    </div>
+                <div class="gift-option message-option" id="messageOption">
+                        <div class="gift-image">💌</div>
+                        <span class="gift-label">Special Message</span>
+                    </div>
+                </div>
+            </div>
+            <p class="scroll-instruction">Scroll up for your gift my love</p>
+        </div>
+
+        <!-- Surprise Modal (Love Letter) -->
+        <div class="surprise-modal" id="surpriseModal">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">×</button>
+                <div class="modal-hearts">
+                    <span>💕</span><span>💖</span><span>💕</span>
+                </div>
+                <h3 class="modal-title">My Secret Message to You</h3>
+                <div class="modal-divider">✨💝✨</div>
+                <p class="modal-message">
+                    My little kitten,<br><br>
+                    Honestly words can't really express how much i love you and care about you. 
+                    i know that some other boys buy gifts and some flowers etc for their babe's but i actually can't really buy those from here and this might not really be the best gift but this is my most creative gift ever and every word your seeing was by my hand and deep down my heart. Babe i just want to say thank you for everything you have done in my life like i literally always thank you cause srsly me before and me after i met you is very very different the boring depressed is now a very active and playful nigga so thank you so much for everything. In a relationship there is meant to be ups and down downs that are very bad just like thursday my love but one thing i always say is i pray we get through this cause yh sometimes i fuck up sometimes you do, you get angry i also get angry but after all this the next day we turn back to the lovely dovey couples we are no relationship  is the best it's up to us to make it the best nobody is perfect it's up to us to correct our flaws and make each other perfect so babe no matter the argument we face cause i know worse are yet to come just know that am always by your side my love shey i call you my wife don't play with that word it's not something to just take as a joke am with you for life I'm never getting tired if i get tired I'll go and drink water and sleep tomorrow we'll continue but i can never get tired i can't remember the last time my feelings dropped becaus of i understood what relationship-marriage really meant. All am just tryin to say is no matter the argument I'll always choose you over the argument cause i srsly don't want anything to happen to us am being srs we have been through a lot we have done a lot am not willing to dispose all these memories and start a new life (FUCK NO!) it's you i want now it's you i want tomorrow and it's you i want forever my love. Like i so fucking love you soooooooooooooooooooooooooooooooooooooooooooooooooooooooo much babe as a say again this is not my first relationship but this best ever this is not pick-up lines you are the best person that has ever happened to me sometimes i just thank God for us cause i just have this feeling that am satisfied no more looking i can finally settle down knowing i have sorted out who the mother to my children will be incase you don't know her Her name is Mrs Nwankwo Jennifer Chiamaka yh that's my wife's name.    
+                    Babe honestly i really hope you love this cause i didn't pay someone to do this it was me and my tech skills cause yh am broke but with the little i had i did my best for you i really hope you enjoy this gift even though it might not seem like a big thing to you but it means a lot to me.<br><br>
+                    I just have one more to tell you babe! my love! mi little kitten! i love you so fucking much you are the most special person in my life and i can't wait to spend the rest of my life with you Honestly I've been dreaming of our lives together so tell me why it shouldn't be you. HAPPY VALENTINE'S DAY ONCE AGAIN MY LOVE AND CHEERS TO MORE YEARS OF LOVE AND HAPPINESS 💕 we will see 2027, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45... i typed all these yrs case we would have married and multiplied so no turning back and lastly cheers to our upcoming businesses and cheers to our rich lifestyle 20 cars still haven't forgotten this. This is Goodbye for now my love would be waiting for your reply<br><br>
+                    <strong>I love you more than words could ever say. 💕</strong>
+                </p>
+                <div class="modal-signature">
+                    Forever Yours,<br>
+                    <span class="signature-heart">❤️</span>
+                </div>
+                <div class="video-surprise-link">
+                    <a href="#" id="videoSurpriseBtn" class="surprise-video-btn">
+                        🎬 Play me for another surprise 💕
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Video Surprise Modal -->
+        <div class="video-modal" id="videoModal">
+            <div class="modal-overlay" id="videoModalOverlay"></div>
+            <div class="video-modal-content">
+                <button class="modal-close" id="videoModalClose">×</button>
+                <div class="video-modal-hearts">
+                    <span>🎬</span><span>💕</span><span>🎬</span>
+                </div>
+                <h3 class="video-modal-title">Your Special Surprise 💖</h3>
+                <div class="video-container">
+                    <video id="surpriseVideo" controls playsinline>
+                        <source src="video/my love.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="love-footer">
+        <p>Made with <span class="footer-heart">❤️</span> for you</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
