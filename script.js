@@ -121,6 +121,67 @@ function setupEventListeners() {
         }, 300); // reduced delay for faster response
     });
 
+    // No button logic
+    let noClickCount = 0;
+    let chatBubbleTimeout;
+    const chatBubbleModal = document.getElementById('chatBubbleModal');
+    const chatBubbleText = document.getElementById('chatBubbleText');
+
+    noBtn.addEventListener('click', () => {
+        if (noClickCount >= 5) return;
+        noClickCount++;
+
+        // Scale values: 1-3 grow gently, 4 covers No halfway, 5 covers fully
+        const isMobile = window.innerWidth <= 768;
+        const scaleMap = isMobile
+            ? { 1: 1.1, 2: 1.2, 3: 1.35, 4: 1.7, 5: 2.2 }
+            : { 1: 1.15, 2: 1.3, 3: 1.5, 4: 2.0, 5: 2.8 };
+        yesBtn.style.transform = `scale(${scaleMap[noClickCount]})`;
+        yesBtn.style.transition = 'transform 0.4s ease';
+
+        if (noClickCount <= 3) {
+            if (noClickCount === 1) {
+                chatBubbleText.textContent = "why no\ud83d\ude2d\ud83d\ude2d";
+            } else if (noClickCount === 2) {
+                chatBubbleText.textContent = "Just press yes gng\ud83e\udd27";
+            } else if (noClickCount === 3) {
+                chatBubbleText.textContent = "Azzy why are you doing us like this\ud83d\ude2d\ud83d\ude12";
+            }
+            
+            chatBubbleModal.classList.add('active');
+            
+            if (chatBubbleTimeout) clearTimeout(chatBubbleTimeout);
+            chatBubbleTimeout = setTimeout(() => {
+                chatBubbleModal.classList.remove('active');
+            }, 3000);
+        } else if (noClickCount >= 4) {
+            chatBubbleModal.classList.remove('active');
+            createAngryExplosion(noBtn);
+        }
+    });
+    // Money option logic
+    let moneyClickCount = 0;
+    let moneyChatBubbleTimeout;
+    const moneyChatBubbleModal = document.getElementById('moneyChatBubbleModal');
+    const moneyChatBubbleText = document.getElementById('moneyChatBubbleText');
+
+    moneyOption.addEventListener('click', () => {
+        moneyClickCount++;
+        
+        if (moneyClickCount === 1) {
+            moneyChatBubbleText.textContent = "Maybe like \"you think say i guide?\"😂";
+        } else {
+            moneyChatBubbleText.textContent = "it have do na😭";
+        }
+        
+        moneyChatBubbleModal.classList.add('active');
+        
+        if (moneyChatBubbleTimeout) clearTimeout(moneyChatBubbleTimeout);
+        moneyChatBubbleTimeout = setTimeout(() => {
+            moneyChatBubbleModal.classList.remove('active');
+        }, 3000);
+    });
+
     // Message option - opens love letter
     messageOption.addEventListener('click', () => {
         closeGiftModal();
@@ -160,11 +221,7 @@ function setupEventListeners() {
 
 // ===== Runaway Buttons =====
 function setupRunawayButtons() {
-    // No button runs away from cursor
-    setupRunawayElement(noBtn, 120);
-
-    // Money option runs away from cursor
-    setupRunawayElement(moneyOption, 120);
+    // Money option no longer runs away
 }
 
 function setupRunawayElement(element, escapeDistance) {
@@ -290,6 +347,44 @@ function createHeartExplosion(sourceElement) {
             });
 
             setTimeout(() => heart.remove(), 800);
+        }, i * 30);
+    }
+}
+
+function createAngryExplosion(sourceElement) {
+    const rect = sourceElement.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    const emojis = ['😡', '🤬', '💔', '😠', '😤'];
+
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+            const el = document.createElement('span');
+            el.className = 'floating-heart'; // Reuse this class for the animation
+            el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+            el.style.position = 'fixed';
+            el.style.left = centerX + 'px';
+            el.style.top = centerY + 'px';
+            el.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+            el.style.opacity = '1';
+            el.style.zIndex = '9999';
+            el.style.pointerEvents = 'none';
+            el.style.animation = 'none';
+            el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+
+            document.body.appendChild(el);
+
+            const angle = (i / 20) * 360;
+            const distance = 80 + Math.random() * 80;
+            const x = Math.cos(angle * Math.PI / 180) * distance;
+            const y = Math.sin(angle * Math.PI / 180) * distance;
+
+            requestAnimationFrame(() => {
+                el.style.transform = `translate(${x}px, ${y}px) scale(0)`;
+                el.style.opacity = '0';
+            });
+
+            setTimeout(() => el.remove(), 800);
         }, i * 30);
     }
 }
